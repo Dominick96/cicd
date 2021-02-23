@@ -9,12 +9,12 @@ steps:
     playbook: playbook.yml
     inventory: inventory
     syntax_check: true
-  # when:
-  #   event:
-  #   - pull_request
+  when: centos == true
+    
 - name: Check ubuntu
   image: plugins/ansible:1
   settings:
     playbook: playbook.yml
     inventory: inventory
     syntax_check: true
+  when: ubuntu == true
