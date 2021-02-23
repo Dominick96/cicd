@@ -3,13 +3,18 @@ type: kubernetes
 name: default
 
 steps:
-- name: check ansible syntax
+- name: Check centos
   image: plugins/ansible:1
-  environment:
-    another_var: foo
   settings:
     playbook: playbook.yml
     inventory: inventory
+    syntax_check: true
   # when:
   #   event:
   #   - pull_request
+- name: Check ubuntu
+  image: plugins/ansible:1
+  settings:
+    playbook: playbook.yml
+    inventory: inventory
+    syntax_check: true
