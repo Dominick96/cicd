@@ -10,7 +10,6 @@ steps:
   settings:
     playbook: playbook.yml
     inventory: inventory
-    syntax_check: true
   # when:
   #   event:
   #   - pull_request
