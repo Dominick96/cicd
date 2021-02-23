@@ -9,7 +9,8 @@ steps:
     playbook: playbook.yml
     inventory: inventory
     syntax_check: true
-  when: centos == true
+    environment:
+      centos: {centos}
     
 - name: Check ubuntu
   image: plugins/ansible:1
@@ -17,4 +18,5 @@ steps:
     playbook: playbook.yml
     inventory: inventory
     syntax_check: true
-  when: ubuntu == true
+    environment:
+      ubuntu: {ubuntu}
