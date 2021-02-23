@@ -17,6 +17,7 @@ steps:
     event:
     - pull_request
 
+
 - name: apply ansible playbook
   image: plugins/ansible:1
   environment:
