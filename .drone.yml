@@ -9,7 +9,7 @@ steps:
     another_var: foo
   settings:
     playbook: playbook.yml
-    # inventory: ansible/inventory
+    inventory: inventory
     syntax_check: true
   # when:
   #   event:
